@@ -1,0 +1,45 @@
+<div></div>
+<button id="버튼">버튼이에요</button>
+
+<script>
+
+    for(let i = 1; i < 6; i++) {
+        setTimeout(function() {console.log(i);}, i*1000);
+    }
+
+    var 사람 = {
+        name : '손흥민',
+        sayHi : function(){
+            console.log(`안녕 나는 ${사람.name}`);
+        }
+    }
+
+    사람.sayHi();
+
+    // 문제1 : 언디파인드?
+    // 문제2 : 언디파인드?
+    // 문제3 : 2
+    // 문제4 : 7?
+    // 믄제
+
+    var 자료 = {
+        data : [1,2,3,4,5]
+    }
+
+    자료.전부더하기 = function(){
+        var sum = 0;
+        자료.data.forEach(function(a) {
+            sum += a;
+        });
+        console.log(sum);
+    }
+
+    자료.전부더하기();
+
+    document.getElementById('버튼').addEventListener('click', function(){
+        var element = this.innerHTML;
+        setTimeout(function(){
+            console.log(element)
+        }, 3000);
+    });
+</script>
